@@ -22,5 +22,23 @@ class Programm
         }
         
         Console.WriteLine($"Результат: {result}");
+
+        
+        Console.Write("Введите число x (x >= 100): ");
+        int x = int.Parse(Console.ReadLine());
+
+        if (x < 100)
+        {
+            Console.WriteLine("Число должно быть больше или равно 100");
+            return;
+        }
+
+        string xString = x.ToString();
+
+        char secondDigit = xString[1];
+
+        string nString = xString.Remove(1, 1) + secondDigit;
+
+        Console.WriteLine($"Полученное число n: {nString}");
     }
 }
